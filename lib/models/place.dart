@@ -1,15 +1,21 @@
 
 import 'package:flutter/material.dart';
 import 'dart:io';
+import 'package:meta/meta.dart';
 
 class PlaceLocation{
-  final double latitude;
-  final double longiitude;
-  final String adress;
+  final double? latitude;
+  final double? longitude;
+  var address;
 
-  PlaceLocation(this.adress, {
-    required this.latitude, 
-    required this.longiitude,
+  // PlaceLocation({
+  //   required this.latitude,
+  //   required this.longitude,
+  // });
+  PlaceLocation({
+    @required this.latitude,
+    @required this.longitude,
+    this.address,
   });
 }    
 
